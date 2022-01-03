@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Dashboard from './components/dashboard.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'reactstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    <div className="top">
+    <div className="topbar">
+      <p>
+      PULSE PTT AGENT MANAGEMENT CONSOLE
+      </p>
+      </div>
+      <div className="tsbar">
+        <p style={{paddingTop:"2%"}}>Agent Name</p>
+        <p>English&emsp;&emsp;&emsp;&emsp;<Button color="danger">logout</Button></p>
+      </div>
+      </div>
+      <div style={{display:"flex"}}>
+       <Dashboard />
+      </div>
+      </div>
   );
 }
 
